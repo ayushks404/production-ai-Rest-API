@@ -42,9 +42,9 @@ flowchart TD
     Routes -->|/api/ai/chat| AIRoute["AI SSE Streaming Pipeline"]
     Routes -->|/health/ready| HealthRoute["Readiness Probe (Promise.allSettled)"]
     
-    AuthRoute -->|Atomic getdel / setex| RedisServer[("Redis 7 (Sessions & Counters)")]
-    AuthRoute -->|User Document (.lean)| MongoDBServer[("MongoDB (User Store)")]
-    AIRoute -->|Token-by-Token Stream| OpenAICloud["OpenAI API (gpt-4o-mini)"]
+    AuthRoute -->|"Atomic getdel / setex"| RedisServer[("Redis 7: Sessions & Counters")]
+    AuthRoute -->|"User Document via .lean()"| MongoDBServer[("MongoDB: User Store")]
+    AIRoute -->|"Token-by-Token Stream"| OpenAICloud["OpenAI API: gpt-4o-mini"]
 ```
 
 ---
