@@ -1,0 +1,53 @@
+# ==========================================
+# 1. DEPENDENCIES & PACKAGE MANAGERS
+# ==========================================
+node_modules/
+.pnp
+.pnp.js
+
+# ==========================================
+# 2. COMPILED BUILD OUTPUT
+# ==========================================
+dist/
+build/
+*.tsbuildinfo
+
+# ==========================================
+# 3. SECRETS, CREDENTIALS & PRIVATE KEYS
+# ==========================================
+# NEVER commit private PEM keys or environment secrets
+*.pem
+*.key
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# 4. STRUCTURED LOGS & ROTATED ARCHIVES
+# ==========================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==========================================
+# 5. LOCAL TESTING & RUNTIME ARTIFACTS
+# ==========================================
+cookies.txt
+.pm2/
+pids/
+*.pid
+*.seed
+coverage/
+.turbo/
+
+# ==========================================
+# 6. OS & EDITOR CONFIGURATIONS
+# ==========================================
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
